@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    /** Colors */
+    --anti-flash-white: #F3F3F3;
+    --black: #000000;
+    --charleston-green-v1: #2D2D2D;
+    --charleston-green-v2: #2B2B2B;
+    --paolo-veronese-green: #009379;
+    --piggy-pink: #F6DCE9;
+    --pink-lace: #F9E6F0;
+    --white: #ffffff;
+
+    /** Header */
+    --header-height: 6rem;
+
+    /** Forms */
+    --height-input: 69px;
+
+    /** Anchors */
+    --color-menu-link: var( --charleston-green-v1 );
+
+    /** Fonts */
+    --overall-font-size: 62.5%;
+}
+
+* {
+    /* border: 1px dotted blue; */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: var( --overall-font-size );      /* 1rem = 10px */
+}
+
+body {
+    font-family: "Epilogue", sans-serif;
+    font-size: 1.6rem;      /* 16px */
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+p {
+    line-height: 1.4;
+    font-size: 1.7rem;
+}
