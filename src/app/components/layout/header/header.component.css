@@ -10,7 +10,6 @@
 .logo {
     font-size: 2rem;
     font-weight: 600;
-    flex-basis: 25%;
 }
 
 .navbar {
@@ -54,6 +53,46 @@
 .menu-left {
     list-style: none;
     padding: 0;
+
+    .menu-item {
+        align-items: center;
+        display: flex;
+        justify-content: end;
+    }
+
+    .link-item {
+        align-items: center;
+        display: flex;
+        height: 6rem;
+        justify-content: center;
+        position: relative;
+        width: 7rem;
+    }
+}
+
+#logo, #menu-left {
+    flex-basis: 7rem;
+}
+
+@media ( min-width: 768px ) {
+    #logo, #menu-left { 
+        flex-basis: 16rem;
+    }
+}
+
+#cart-items {
+    align-items: center;
+    background: red;
+    border-radius: 1rem;
+    color: white;
+    display: flex;
+    font-size: 1.4rem;
+    height: 2rem;
+    justify-content: center;
+    position: absolute;
+    right: 1.4rem;
+    top: .4rem;
+    width: 2rem;
 }
 
 /** Interaccion del Menu */
