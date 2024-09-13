@@ -1,7 +1,18 @@
 <header class="header-product">
-    <label for="order-select">Sort by</label>
-    <select [(ngModel)]="sortOrder" (ngModelChange)="onSortChange( $event )">
-        <option value="asc">asc</option>
-        <option value="desc">desc</option>
-    </select>    
+    <div class="sort">
+        <label for="order-select">Sort by </label>
+        <select [(ngModel)]="sortOrder" (ngModelChange)="onSortChange( $event )">
+            <option value="asc">asc</option>
+            <option value="desc">desc</option>
+        </select>
+    </div>
+    <div class="show">
+        <label for="show-select">Show </label>
+        <select [(ngModel)]="showNumber" (ngModelChange)="onShowChange( $event )">
+            <option value="9">9</option>
+            <option value="12">12</option>
+            <option value="15">15</option>
+            <option value="18">18</option>
+        </select>
+    </div>
 </header>

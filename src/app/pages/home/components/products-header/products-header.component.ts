@@ -6,6 +6,13 @@ enum SortOrder {
   Desc = 'desc'
 }
 
+enum ShowNumber {
+  Nine = 9,
+  Twelve = 12,
+  Fifteen = 15,
+  Eighteen = 18,
+}
+
 @Component({
   selector: 'app-products-header',
   standalone: true,
@@ -17,8 +24,14 @@ enum SortOrder {
 })
 export class ProductsHeaderComponent {
   sortOrder: SortOrder = SortOrder.Desc; 
+  showNumber: Number = ShowNumber.Twelve;
 
   onSortChange( event: any ) {
     this.sortOrder = event.target.value;
   }
+
+  onShowChange( event: any ) {
+    this.showNumber = event.target.value;
+  }
+  
 }

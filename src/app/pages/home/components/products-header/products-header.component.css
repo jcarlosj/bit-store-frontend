@@ -1,0 +1,7 @@
+.header-product {
+    align-items: center;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}

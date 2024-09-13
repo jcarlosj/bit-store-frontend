@@ -47,3 +47,8 @@ body {
 p {
     line-height: 1.4;
 }
+
+.mat-body-large, .mat-typography .mat-body-large, .mat-typography {
+    font: 400 1.7rem / 1.5rem Roboto, sans-serif;
+    letter-spacing: .031rem;
+}
