@@ -1,0 +1,15 @@
+.page-home {
+    display: flex;
+    height: calc( 100vh - var( --header-height ) );
+    
+    .sitebar {
+        flex: 0 0 16rem;
+        border: blue;
+    }
+
+    .main-content {
+        flex: 1 0 auto;
+        border: 1px dotted orange;
+    }
+
+}
