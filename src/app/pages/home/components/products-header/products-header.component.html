@@ -1,0 +1,7 @@
+<header class="header-product">
+    <label for="order-select">Sort by</label>
+    <select [(ngModel)]="sortOrder" (ngModelChange)="onSortChange( $event )">
+        <option value="asc">asc</option>
+        <option value="desc">desc</option>
+    </select>    
+</header>
