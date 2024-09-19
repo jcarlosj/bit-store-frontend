@@ -1,0 +1,7 @@
+.product-filter {
+    align-items: center;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
