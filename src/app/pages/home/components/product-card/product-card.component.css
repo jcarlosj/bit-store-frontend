@@ -1,0 +1,35 @@
+.card {
+    max-width: 304px ;
+    width: 100%;
+    border: 1px dotted red;
+    box-sizing: border-box;
+
+    .card-content {
+        margin: 1rem;
+        border: 1px dotted blue;
+        box-sizing: border-box;
+        
+    }
+
+    .card-info,
+    .card-actions {
+        display: flex;
+        margin: 1rem 0;
+    }
+
+    .card-info {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .card-actions {
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.product-category {
+    font-size: smaller;
+    margin: .5rem 0 1.5rem 0;
+}
