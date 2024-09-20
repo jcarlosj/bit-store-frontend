@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
     /** Colors */
+    --bleu-de-france: #2A7AE4;
     --anti-flash-white: #F3F3F3;
     --black: #000000;
     --charleston-green-v1: #2D2D2D;
@@ -15,6 +16,7 @@
 
     /** Forms */
     --height-input: 69px;
+    --height-btn: 3.8rem;
 
     /** Anchors */
     --color-menu-link: var( --charleston-green-v1 );
@@ -51,4 +53,32 @@ p {
 .mat-body-large, .mat-typography .mat-body-large, .mat-typography {
     font: 400 1.7rem / 1.5rem Roboto, sans-serif;
     letter-spacing: .031rem;
+}
+
+.btn {
+    align-content: center;
+    border: 2px solid transparent;
+    height: var( --height-btn );
+    max-width: 16rem;
+    text-align: center;
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: var( --bleu-de-france );
+    border: 2px solid var( --bleu-de-france );
+    color: var( --white );
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.btn-primary:hover {
+    color: var( --white );
+}
+
+.btn-outline-primary {
+    background-color: var( --white );
+    border: 2px solid var( --bleu-de-france );
+    color: var( --bleu-de-france );
+    font-size: 1.4rem;
+    font-weight: 500;
 }
