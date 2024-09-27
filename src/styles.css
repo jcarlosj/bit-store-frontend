@@ -93,6 +93,7 @@ a {
 
 #page.page {
     min-height: calc(100vh - var(--header-height));
+    border: 1px solid green;
 }
 
 @media ( min-width: 576px ) {
@@ -136,10 +137,10 @@ a {
     }
 }
 
-.mat-body-large, .mat-typography .mat-body-large, .mat-typography {
+/* .mat-body-large, .mat-typography .mat-body-large, .mat-typography {
     font: 400 1.7rem / 1.5rem Roboto, sans-serif;
     letter-spacing: .031rem;
-}
+} */
 
 .btn {
     align-content: center;
