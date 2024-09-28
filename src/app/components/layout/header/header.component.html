@@ -12,10 +12,10 @@
 
             <input type="checkbox" id="toggle-main-menu">
             <label for="toggle-main-menu" class="main-menu__container main-menu__open">
-                menu
+                <fa-icon [icon]="faBars"></fa-icon>
             </label>
             <label for="toggle-main-menu" class="main-menu__container main-menu__close">
-                close
+                <fa-icon [icon]="faXmark"></fa-icon>
             </label>
             <label for="toggle-main-menu" class="background">
                 <span></span>
@@ -55,7 +55,7 @@
             <ul id="menu-left" class="menu-left">
                 <li class="menu-item">
                     <a href="#" class="link-item">
-                        shopping_cart
+                        <fa-icon [icon]="faCartShopping"></fa-icon>
                         <span id="cart-items">1</span>
                     </a>
                 </li>
