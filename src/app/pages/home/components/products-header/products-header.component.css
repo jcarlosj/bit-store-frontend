@@ -1,7 +1,36 @@
 .product-header {
     align-items: center;
-    /* border: 1px solid blue; */
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    gap: 1rem;
+
+    label {
+        text-align: left;
+        margin-bottom: 0.5rem;
+    }
+ 
+    .filter-option {
+        display: flex;
+        flex-direction: column;
+        flex: 0 1 50%;
+        padding: 1rem;
+    }
+    
+    @media ( min-width: 567px ) {
+        .filter-option {
+            flex: 0 1 25%;
+        }
+    }
+
+    @media ( min-width: 768px ) {
+        .filter-option {
+            flex: 0 1 12%;
+        }
+    }
+
+    @media ( min-width: 1200px ) {
+        .filter-option {
+            flex: 0 1 8%;
+        }
+    }
 }
