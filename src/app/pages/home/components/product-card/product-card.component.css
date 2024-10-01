@@ -1,12 +1,12 @@
 .card {
     max-width: 304px ;
     width: 100%;
-    border: 1px dotted red;
+    /* border: 1px dotted red; */
     box-sizing: border-box;
 
     .card-content {
         margin: 1rem;
-        border: 1px dotted blue;
+        /* border: 1px dotted blue; */
         box-sizing: border-box;
         
     }

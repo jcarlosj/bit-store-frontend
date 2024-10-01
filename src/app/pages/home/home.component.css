@@ -1,14 +1,26 @@
 .page-home {
     display: flex;
-    
+ 
+    .page-home__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
     .sitebar {
-        flex: 0 0 20rem;
-        border: 1px dotted blue;
+        /* border: 1px dotted blue; */
+        flex: 0 0 16rem;
+    }
+
+    @media ( min-width: 567px ) {
+        .sitebar {
+            flex: 0 0 20rem;
+        }
     }
 
     .main-content {
+        /* border: 1px dotted orange; */
         flex: 1 0 auto;
-        border: 1px dotted orange;
     }
 
 }

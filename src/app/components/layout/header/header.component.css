@@ -116,7 +116,7 @@ span.link-menu {
 }
 
 #logo {
-    flex: 0 0 20rem;
+    flex: 0 0 16rem;
 }
 /** #menu-hamburguer */
 .main-menu__container {
@@ -127,10 +127,13 @@ span.link-menu {
     flex: 0 0 8rem;
 }
 
-@media ( min-width: 768px ) {
+@media ( min-width: 567px ) {
     #logo { 
         flex: 0 0 20rem;
     }
+}
+
+@media ( min-width: 768px ) {
     #menu-left { 
         flex-basis: 10rem;
     }

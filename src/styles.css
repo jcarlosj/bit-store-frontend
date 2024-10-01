@@ -11,6 +11,7 @@
     --pink-lace: #F9E6F0;
     --white: #ffffff;
 
+    --AliceBlue: #EAF2FD;
     --Cultured: #F5F5F5;
     --OuterSpace: #464646;
 
@@ -56,7 +57,7 @@ html {
 }
 
 body {
-    font-family: "Epilogue", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 1.6rem;      /* 16px */
     line-height: 1.614rem;
     text-align: center;
@@ -81,24 +82,21 @@ a {
     text-decoration: none;
 }
 
-.container,
-.container-fluid,
-.container-xxl,
-.container-xl,
-.container-lg,
-.container-md,
-.container-sm {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: calc( var( --gutter-x ) * 0.5 );
-    padding-right: calc( var( --gutter-x ) * 0.5 );
+.container-fluid {
+    max-width: 540px;
     width: 100%;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 @media ( min-width: 576px ) {
     .container-sm, 
     .container {
         max-width: 540px;
+        margin: 0 auto;
+        padding-left: calc( var( --gutter-x ) * 0.5 );
+        padding-right: calc( var( --gutter-x ) * 0.5 );
     }
 }
 @media ( min-width: 768px ) {
@@ -148,7 +146,7 @@ a {
 
     .logo__link {
         align-items: center;
-        border: 1px dotted blue;
+        /* border: 1px dotted blue; */
         display: flex;
         justify-content: left;
         text-decoration: none;
@@ -157,6 +155,9 @@ a {
 
     .logo__text {
         color: var( --paolo-veronese-green );
+        font-size: 2.6rem;
+        font-weight: 700;
+        padding: 0 0 0 0.6rem;
     }
 
     .logo__text--blue {
@@ -197,11 +198,11 @@ a {
 
 /** Forms */
 .form {
-    width: 100%;
+    width: 90%;
 }
 
 input, textarea {
-    background: orange;
+    background: var(--white);
 }
 
 .login__form,
@@ -279,7 +280,7 @@ input, textarea {
 
 /** Inputs */
 .form-input {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     position: absolute;
     top: 0;
     left: 0;
@@ -382,7 +383,7 @@ input, textarea {
 }
 
 .form-textarea {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     height: calc( var( --textarea-height ) - var( --padding-top-textarea ) );
     width: var( --width-textarea );
     padding: var( --padding-top-textarea ) 1rem 0 1rem;
@@ -455,7 +456,7 @@ input, textarea {
     margin: .8rem 0 2.6rem 0;
     position: relative;
     width: 100%;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 .field-textarea {
