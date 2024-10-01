@@ -93,6 +93,19 @@
         align-items: center;
         gap: 1rem;
     }
+
+    .menu-item__link {
+        background-color: var(--bleu-de-france);
+        border: 1px solid var(--bleu-de-france);
+        color: var(--white);
+        font-size: 1.6rem;
+        border-radius: .4rem;
+        width: 2.6rem;
+        height: 2.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media ( min-width: 992px ) {
