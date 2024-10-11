@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { AuthService } from '../../services/auth.service';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -35,20 +36,20 @@ export class RegisterComponent {
     this.authService.register( this.formData.value ).subscribe( ( data: any ) => {
       console.log( '>>>', data );
 
-    //   // Valida si la peticion fue exitosa y despliega
-    //   if( data.ok )
-    //     this.classMessage = 'message success';
-    //   else
-    //     this.classMessage = 'message error'
+      // Valida si la peticion fue exitosa y despliega
+      if( data.ok )
+        this.classMessage = 'message success';
+      else
+        this.classMessage = 'message error'
 
-    //   // Oculta mensaje del formulario
-    //   setTimeout( () => {
-    //     this.classMessage = '';
-    //     this.message = '';
-    //   }, 2000 );
+      // Oculta mensaje del formulario
+      setTimeout( () => {
+        this.classMessage = '';
+        this.message = '';
+      }, 2000 );
 
-    //   // Asigna el mensaje
-    //   this.message = data.msg!;
+      // Asigna el mensaje
+      this.message = data.msg!;
     });
 
     this.formData.reset();
