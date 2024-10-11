@@ -487,3 +487,82 @@ input, textarea {
 .field-button {
     margin: 0;
 }
+
+/** Formularios */
+.form-auth, .form-product {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+  }
+  
+  .form-auth .field,
+  .form-product .field {
+    display: flex;
+    flex-direction: column;
+    margin: 0.3rem 0;
+  }
+  
+  .form .field {
+    /* border: 1px dotted blue; */
+    display: flex;
+    flex-direction: column;
+    margin: 0.3rem 0;
+    width: 80%;
+  }
+  
+  .form .input-field {
+    padding: 0.4rem;
+  }
+  
+  .field.footer-form {
+    text-align: center;
+  }
+  
+  .form .errors {
+    border: 1px dotted red;
+    color: red;
+    width: 90%;
+    background-color: antiquewhite;
+    padding: 0 1rem;
+    display: none;
+  }
+  
+  .form .title-errors {
+    text-align: center;
+  }
+  
+  .form .error-message {
+    color: red;
+    font-style: italic;
+    font-size: 1.1rem;
+  }
+  
+  button.button.btn-primary {
+    width: 40%;
+    margin: 1rem auto;
+    padding: 0.4rem;
+    background-color: black;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  
+  .message {
+    padding: 1rem;
+    margin: 1rem 0;
+    box-sizing: border-box;
+  }
+  
+  .error {
+    border: 1px solid red;
+    color: red;
+    background-color: pink;
+  }
+  
+  .success {
+    border: 1px solid green;
+    color: green;
+    background-color: limegreen;
+  }
