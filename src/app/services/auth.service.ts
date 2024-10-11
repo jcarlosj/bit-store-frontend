@@ -11,4 +11,8 @@ export class AuthService {
   register( newUser: any ): any {
     return this.http.post( 'http://localhost:3001/api/auth/register', newUser );
   }
+
+  login( credentials: any ): any {
+    return this.http.post( 'http://localhost:3001/api/auth/login', credentials );
+  }
 }
