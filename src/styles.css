@@ -495,7 +495,7 @@ input, textarea {
         margin: 4rem auto;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 2.4rem;
         justify-content: center;
         align-items: center;
 
@@ -503,6 +503,7 @@ input, textarea {
             display: block;
             text-align: left;
             width: 100%;
+            padding-bottom: .5rem;
         }
         .field {
             height: var(--input-height);
@@ -522,6 +523,16 @@ input, textarea {
             padding: 1rem 1.2rem;
             outline: none;
             width: 92%;
+        }
+        .error-message {
+            box-sizing: border-box;
+            text-align: left;
+            width: 100%;
+            font-size: 14px;
+            font-style: italic;
+            font-weight: 600;
+            color: red;
+            height: 2rem;
         }
     }
 }

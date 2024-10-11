@@ -18,18 +18,15 @@
 				formControlName="name"
 				placeholder="Ingrese su Nombre"
 			/>
-			<!-- Despliega los mensajes de error del campo -->
-			<div
-				*ngIf="formData.get( 'name' )?.invalid && formData.get( 'name' )?.dirty && formData.get( 'name' )?.touched"
-				class="error-message"
-			>
-				<small
-				*ngIf="formData.get( 'name' )?.errors?.[ 'required' ]"
-				>
-				El nombre del usuario es requerido
-				</small>
-				
+			<div class="error-message">
+				<div *ngIf="formData.get( 'name' )?.invalid && ( formData.get( 'name' )?.touched || formData.get( 'name' )?.dirty )">
+					<small *ngIf="formData.get( 'name' )?.errors?.[ 'required' ]">
+						El nombre del usuario es requerido
+					</small>
+				</div>
 			</div>
+			<!-- Despliega los mensajes de error del campo -->
+
 		</div>
 		<div class="field">
 			<label for="register-email">Email</label>
@@ -40,17 +37,16 @@
 				formControlName="username"
 				placeholder="Ingrese su Email"
 			/>
-			<!-- Despliega los mensajes de error del campo -->
-			<div
-				*ngIf="formData.get( 'username' )?.invalid && formData.get( 'username' )?.dirty && formData.get( 'username' )?.touched"
-				class="error-message"
-			>
-				<small *ngIf="formData.get( 'username' )?.errors?.[ 'required' ]">
-					El username es requerido
-				</small>
-				<small *ngIf="formData.get( 'username' )?.errors?.[ 'email' ]">
-					El username debe ser un correo electronico
-				</small>
+			<div class="error-message">
+				<!-- Despliega los mensajes de error del campo -->
+				<div *ngIf="formData.get( 'username' )?.invalid && ( formData.get( 'username' )?.touched || formData.get( 'username' )?.dirty )">
+					<small *ngIf="formData.get( 'username' )?.errors?.[ 'required' ]">
+						El username es requerido
+					</small>
+					<small *ngIf="formData.get( 'username' )?.errors?.[ 'email' ]">
+						El username debe ser un correo electronico
+					</small>
+				</div>
 			</div>
 		
 		</div>
@@ -64,21 +60,19 @@
 				placeholder="Ingrese su Password"
 			/>
 			<!-- Despliega los mensajes de error del campo -->
-			<div
-				*ngIf="formData.get( 'password' )?.invalid && formData.get( 'password' )?.dirty && formData.get( 'password' )?.touched"
-				class="error-message"
-			>
-				<small *ngIf="formData.get( 'password' )?.errors?.[ 'required' ]">
-					Contraseña requerida
-				</small>
-				<small *ngIf="formData.get( 'password' )?.errors?.[ 'min' ]">
-					La contraseña debe tener minimo 6 caracteres.
-				</small>
-				<small *ngIf="formData.get( 'password' )?.errors?.[ 'max' ]">
-				La contraseña debe tener maximo 12 caracteres.
-				</small>
+			<div class="error-message">
+				<div *ngIf="formData.get( 'password' )?.invalid && ( formData.get( 'password' )?.touched || formData.get( 'password' )?.dirty )">
+					<small *ngIf="formData.get( 'password' )?.errors?.[ 'required' ]">
+						Contraseña requerida
+					</small>
+					<small *ngIf="formData.get( 'password' )?.errors?.[ 'min' ]">
+						La contraseña debe tener minimo 6 caracteres.
+					</small>
+					<small *ngIf="formData.get( 'password' )?.errors?.[ 'max' ]">
+						La contraseña debe tener maximo 12 caracteres.
+					</small>
+				</div>
 			</div>
-	
 		</div>
 		<!-- Imprime mensaje -->
 		<div class="field">

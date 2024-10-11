@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 import { AuthService } from '../../services/auth.service';
 
@@ -20,15 +20,15 @@ export class LoginComponent {
     private authService: AuthService,
   ) {
     this.formData = new FormGroup({
-      username: new FormControl( '', [] ),
-      password: new FormControl( '', [] )
+      username: new FormControl( '', [ Validators.required, Validators.email ] ),
+      password: new FormControl( '', [ Validators.required, Validators.min( 6 ), Validators.max( 12 ) ] )
     });
   }
 
   handleLogin() {
     console.log( this.formData.value );
 
-    this.authService.login( this.formData.value ).subscribe( ( data: boolean ) => {
+    this.authService.login( this.formData.value ).subscribe( ( data ) => {
       console.log( data );
 
       // Valida si no se logra autenticar el usuario

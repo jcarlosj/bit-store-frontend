@@ -16,23 +16,19 @@
                 formControlName="username"
                 placeholder="Ingrese su Email"
             />
-            <div
-                *ngIf="formData.get( 'email' )?.invalid && ( formData.get( 'email' )?.dirty || formData.get( 'email' )?.touched )"
-                class="error-message"
-            >
-                <!--
-                    formData.get( 'email' )?.invalid verifica si el campo de email es inválido.
-                    formData.get( 'email' )?.dirty comprueba si el campo de email ha sido modificado.
-                    formData.get( 'email' )?.touched verifica si el campo de email ha sido tocado.
-                -->
-        
-                <small *ngIf="formData.get( 'email' )?.errors?.[ 'required' ]">
-                    Email es requerido.
-                </small>
-                <small *ngIf="formData.get( 'email' )?.errors?.[ 'pattern' ]">
-                    Por favor, introduzca un email válido.
-                </small>
-            </div>
+            
+			<div class="error-message">
+				<!-- Despliega los mensajes de error del campo -->
+				<div *ngIf="formData.get( 'username' )?.invalid && ( formData.get( 'username' )?.touched || formData.get( 'username' )?.dirty )">
+					<small *ngIf="formData.get( 'username' )?.errors?.[ 'required' ]">
+						El username es requerido
+					</small>
+					<small *ngIf="formData.get( 'username' )?.errors?.[ 'email' ]">
+						El username debe ser un correo electronico
+					</small>
+				</div>
+			</div>
+
         </div>
         <div class="field">
             <label for="login-password">Password</label>
@@ -43,19 +39,21 @@
                 formControlName="password"
                 placeholder="Ingrese su Password"
             />
-            <div
-                *ngIf="formData.get( 'password' )?.invalid && ( formData.get( 'password' )?.dirty || formData.get( 'password' )?.touched )"
-                class="error-message"
-            >
-                <small *ngIf="formData.get( 'password' )?.errors?.[ 'required' ]">
-                    Contraseña es requerida.
-                </small>
-                <small
-                    *ngIf="formData.get( 'password' )?.errors?.[ 'pattern' ]"
-                >
-                    La contraseña debe tener al menos 8 caracteres y contener al menos 1 número, 1 mayúscula 1 carácter especial.
-                </small>
-            </div>
+            <!-- Despliega los mensajes de error del campo -->
+			<div class="error-message">
+				<div *ngIf="formData.get( 'password' )?.invalid && ( formData.get( 'password' )?.touched || formData.get( 'password' )?.dirty )">
+					<small *ngIf="formData.get( 'password' )?.errors?.[ 'required' ]">
+						Contraseña requerida
+					</small>
+					<small *ngIf="formData.get( 'password' )?.errors?.[ 'min' ]">
+						La contraseña debe tener minimo 6 caracteres.
+					</small>
+					<small *ngIf="formData.get( 'password' )?.errors?.[ 'max' ]">
+						La contraseña debe tener maximo 12 caracteres.
+					</small>
+				</div>
+			</div>
+
         </div>
         <div class="field">
             <button
